@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Logo } from "../ui/logo";
-import { cn } from "@/utils/misc";
-import { Globe, Loader2, Star, Wand2, Zap } from "lucide-react";
-import siteConfig from "~/site.config";
-import { ThemeSwitcherHome } from "@/ui/theme-switcher";
+// import { cn } from "@/utils/misc";
+import { Globe, Loader2, Wand2, Zap } from "lucide-react";
+// import siteConfig from "~/site.config";
+// import { ThemeSwitcherHome } from "@/ui/theme-switcher";
 import ShadowPNG from "/images/shadow.png";
 import { useConvexAuth } from "@convex-dev/react-query";
 import { Route as AuthLoginRoute } from "@/routes/_app/login/_layout.index";

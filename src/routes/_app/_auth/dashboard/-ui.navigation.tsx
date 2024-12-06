@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { cn, useSignOut } from "@/utils/misc";
 import { ThemeSwitcher } from "@/ui/theme-switcher";
-import { LanguageSwitcher } from "@/ui/language-switcher";
+// import { LanguageSwitcher } from "@/ui/language-switcher";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -33,7 +33,7 @@ export function Navigation({ user }: { user: User }) {
   const navigate = useNavigate();
   const isDashboardPath = matchRoute({ to: DashboardRoute.fullPath });
   const isSettingsPath = matchRoute({ to: SettingsRoute.fullPath });
-  const isBillingPath = matchRoute({ to: BillingSettingsRoute.fullPath });
+  // const isBillingPath = matchRoute({ to: BillingSettingsRoute.fullPath });
 
   if (!user) {
     return null;
