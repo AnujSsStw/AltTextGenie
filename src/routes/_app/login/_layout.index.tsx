@@ -105,7 +105,9 @@ function LoginForm({
           flow: flow,
         });
         onSubmit(value.email);
-        success();
+        if (flow === "signIn") {
+          success();
+        }
         setIsSubmitting(false);
       } catch (error) {
         setIsSubmitting(false);
