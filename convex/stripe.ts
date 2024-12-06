@@ -328,10 +328,13 @@ export const createSubscriptionCheckout = action({
     }
 
     const price = newPlan?.prices[args.planInterval][args.currency];
+    if (!price) {
+      throw new Error(ERRORS.STRIPE_SOMETHING_WENT_WRONG);
+    }
 
     const checkout = await stripe.checkout.sessions.create({
       customer: user.customerId,
-      line_items: [{ price: price?.stripeId, quantity: 1 }],
+      line_items: [{ price: price.stripeId, quantity: 1 }],
       mode: "subscription",
       payment_method_types: ["card"],
       success_url: `${SITE_URL}/dashboard/checkout`,

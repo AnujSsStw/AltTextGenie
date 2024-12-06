@@ -89,6 +89,7 @@ export function SubscriptionErrorEmail({ email }: SubscriptionEmailOptions) {
             <br />
             But don't worry, we'll not charge you anything.
           </Text>
+          {/* TODO: fix link */}
           <Text style={{ fontSize: "16px", lineHeight: "26px" }}>
             The <Link href="http://localhost:3000">domain-name.com</Link> team.
           </Text>

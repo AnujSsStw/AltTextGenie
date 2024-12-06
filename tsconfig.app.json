@@ -32,7 +32,7 @@
     }
   },
   "include": [
-    "src",
+    "src/**/*",
     "types.ts",
     "constants",
     "convex",

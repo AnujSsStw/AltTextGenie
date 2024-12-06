@@ -31,7 +31,8 @@ const seedProducts = [
   {
     key: PLANS.PRO,
     name: "Pro",
-    description: "Access to all features and unlimited projects.",
+    description:
+      "Access to all features, Advanced AI Processing, Bulk Image Upload, and more.",
     prices: {
       [INTERVALS.MONTH]: {
         [CURRENCIES.USD]: 1990,
@@ -65,7 +66,8 @@ export default internalAction(async (ctx) => {
   const products = await stripe.products.list({
     limit: 1,
   });
-  if (products?.data?.length) {
+  if (products?.data?.length && products.data[0].active) {
+    console.log(products.data);
     console.info("🏃‍♂️ Skipping Stripe products creation and seeding.");
     return;
   }

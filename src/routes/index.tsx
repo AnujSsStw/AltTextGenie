@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Logo } from "../ui/logo";
 import { cn } from "@/utils/misc";
-import { buttonVariants } from "@/ui/button-util";
 import { Globe, Loader2, Star, Wand2, Zap } from "lucide-react";
 import siteConfig from "~/site.config";
 import { ThemeSwitcherHome } from "@/ui/theme-switcher";
@@ -9,7 +8,7 @@ import ShadowPNG from "/images/shadow.png";
 import { useConvexAuth } from "@convex-dev/react-query";
 import { Route as AuthLoginRoute } from "@/routes/_app/login/_layout.index";
 import { Route as DashboardRoute } from "@/routes/_app/_auth/dashboard/_layout.index";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const Route = createFileRoute("/")({
